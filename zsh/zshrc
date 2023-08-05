@@ -1,0 +1,27 @@
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/plugins.zsh
+source ~/.config/zsh/vi.zsh
+source ~/.config/zsh/fzf.zsh
+source ~/.config/zsh/tmux.zsh
+
+source ~/.config/zsh/mappings.zsh
+#
+if [ -f ~/.sconfig/zsh/zshrc ]; then
+	source ~/.sconfig/zsh/zshrc
+fi
+
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+# autopair-init
+source ~/.zim/modules/fzf-tab/fzf-tab.plugin.zsh
+
+# export RANGER_LOAD_DEFAULT_RC=false
+
+source ~/.config/zsh/prompt.zsh
+# source ~/.config/zsh/headline.zsh-theme
+
+#
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+(( ! ${+functions[p10k]} )) || p10k finalize
